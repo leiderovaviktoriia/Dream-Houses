@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="Hounter" content="Everything you need about finding your place to live in">
+    <title>Hounter</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icon/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon/favicon-16x16.png">
+    <link rel="manifest" href="icon/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icon-font.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+</head>
+<body>
+    <div class="background-wrapper">
+        <div class="container">
+            <header class="main-header">
+                
+                <!-- mobile menu start-->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="mobile-menu">
+                    <ul class="mobile-menu__list"> 
+                        <li class="mobile-menu__list-item">
+                            <a href="#!">
+                                About us
+                            </a>
+                        </li>
+                        <li class="mobile-menu__list-item">
+                            <a href="#!">
+                                Article
+                            </a>
+                        </li>
+                        <li class="mobile-menu__list-item">
+                            <a href="#!">
+                                Property
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- mobile menu end -->
+
+                <nav class="main-nav">
+                    <a href="#!" class="logo main-nav__logo">
+                        <img src="img/Logo.svg" width="115" height="36" alt="Hounter logo">
+                    </a>
+                    <ul class="navigation">
+                        <li class="navigation__item">
+                            <a href="#!" class="navigation__link btn-transparent radius">
+                                About us
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#!" class="navigation__link btn-transparent radius">
+                                Article
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#!" class="list navigation__link btn-transparent radius">
+                                Property
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="radius btn-light_green main-nav__button">
+                        Sign Up!
+                    </button>
+                </nav>
+            </header>
+        </div>
+
+        <main>
+            <div class="container">
+                <section class="hero">
+                    <div class="hero__left">
+                        <h1 class="hero__title">
+                            find the place to live <span>your dreams</span> easily here
+                        </h1>
+                        <p class="hero__info">
+                            Everything you need about finding your place to live will be here, where it will be easier for you
+                        </p>
+                        <form class="search hero__search" action="#!" method="get">
+                            <i class="icon-location hero__icon"></i>
+                            <label for="search">Search for the location you want!</label>
+                            <input class="radius search" type="text" id="search" name="search" placeholder="Search for the location you want!">
+                            <button class="radius btn-dark_green hero__button" type="submit">Search</button>
+                        </form>
+                        <p class="hero__partnership-info">
+                            Our partnership
+                        </p>
+                        <ul class="hero__partnership">
+                            <li class="hero__partnership-item">
+                                <a href="#!" class="hero__partnership-link">
+                                    <img src="icon/traveloka_logo.svg" alt="traveloka-logo" class="hero__partnership-label">
+                                </a>
+                            </li>
+                            <li class="hero__partnership-item">
+                                <a href="#!" class="hero__partnership-link">
+                                    <img src="icon/tiketcom-logo.svg" alt="tiketcom-logo" class="hero__partnership-label">
+                                </a>
+                            </li>
+                            <li class="hero__partnership-item">
+                                <a href="#!" class="hero__partnership-link">
+                                    <img src="icon/airbnb-logo.svg" alt="airbnb-logo" class="hero__partnership-label">
+                                </a>
+                            </li>
+                            <li class="hero__partnership-item">
+                                <a href="#!" class="hero__partnership-link">
+                                    <img src="icon/tripadvisor-logo.svg" alt="tripadvisor-logo" class="hero__partnership-label">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hero__right">
+                        <img class="hero__right_img" src="img/hero-img.jpg" alt="Hounter elite house" width="720" height="720">
+                        <div class="hero__boxes">
+                            <div class="radius hero__boxes_big">
+                                <ul class="people">
+                                    <li class="people__img">
+                                        <img src="img/people1.png" alt="people1" width="56" height="56">
+                                    </li>
+                                    <li class="people__img">
+                                        <img src="img/people2.png" alt="people2" width="56" height="56">
+                                    </li>
+                                    <li class="people__img">
+                                        <img src="img/people3.png" alt="people3" width="56" height="56">
+                                    </li>
+                                </ul>
+                                <div class="people__info">
+                                    <p>1K+ people</p>
+                                    <span>Successfully getting<br> home</span>
+                                </div>
+                            </div>
+        
+                            <div class="radius hero__boxes_small">
+                                <img src="img/sold-house.png" alt="sold-house" width="56" height="56">
+                                <div class="house__info">
+                                    <p>56 houses</p>
+                                    <span>Sold monthly</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="features">
+                    <p class="section__pretitle">
+                        Our Recommendation
+                    </p>
+                    <div class="section__container">
+                        <div class="features__block">
+                            <h2 class="title features__title">
+                                Featured house
+                            </h2>
+                            <ul class="features__navigation">
+                                <li class="features__item">
+                                    <a href="#!" class="features__link radius block-button">
+                                        <i class="icon-house-icon"></i>
+                                        House
+                                    </a>
+                                </li>
+                                <li class="features__item">
+                                    <a href="#!" class="features__link radius block-button">
+                                        <i class="icon-villa-icon"></i>
+                                        Villa
+                                    </a>
+                                </li>
+                                <li class="features__item">
+                                    <a href="#!" class="features__link radius block-button">
+                                        <i class="icon-apartment-icon"></i>
+                                        Apartment
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="swiper-container">
+                            <div class="swiper mySwiper1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="img/featured-1.jpg" width="340" height="382" alt="house photo" class="swiper-img">
+                                        <a href="#!" class="img__button img__button_popular radius">
+                                            <i class="icon-icon-fire"></i>
+                                            Popular
+                                        </a>
+                                        
+                                        <div class="slide__info">
+                                            <h3 class="features__subtitle">
+                                                Roselands house
+                                            </h3>
+                                            <p class="features__price">
+                                                $ 35.000.000
+                                            </p>
+                
+                                            <div class="slide__info_people">
+                                                <img src="img/people3.png" width="40" height="40" alt="Dianne Russell">
+                                                <div class="slide__info_contacts">
+                                                    <p>
+                                                        Dianne Russell
+                                                    </p>
+                                                    <span>
+                                                        Manchester, Kentucky
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/featured-2.jpg" width="340" height="382" alt="house photo" class="swiper-img">
+                                        <a href="#!" class="img__button img__button_new radius">
+                                            <i class="icon-house-icon"></i>
+                                            New house
+                                        </a>
+                
+                                        <div class="slide__info">
+                                            <h3 class="features__subtitle">
+                                                Woodlandside
+                                            </h3>
+                                            <p class="features__price">
+                                                $ 20.000.000
+                                            </p>
+                
+                                            <div class="slide__info_people">
+                                                <img src="img/people4.png" width="40" height="40" alt="Robert Fox">
+                                                <div class="slide__info_contacts">
+                                                    <p>
+                                                        Robert Fox
+                                                    </p>
+                                                    <span>
+                                                        Dr. San Jose, South Dakota
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/featured-3.jpg" width="340" height="382" alt="house photo" class="swiper-img">
+                                        <a href="#!" class="img__button img__button_best radius">
+                                            <i class="icon-icon-wallet"></i>
+                                            Best deals
+                                        </a>
+                
+                                        <div class="slide__info">
+                                            <h3 class="features__subtitle">
+                                                The old lighthouse
+                                            </h3>
+                                            <p class="features__price">
+                                                $ 44.000.000
+                                            </p>
+                
+                                            <div class="slide__info_people">
+                                                <img src="img/people5.png" width="40" height="40" alt="Ronald Richards">
+                                                <div class="slide__info_contacts">
+                                                    <p>
+                                                        Ronald Richards
+                                                    </p>
+                                                    <span>
+                                                        Santa Ana, Illinois
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/featured-4.jpg" width="340" height="382" alt="house photo" class="swiper-img">
+                                        <a href="#!" class="img__button img__button_popular radius">
+                                            <i class="icon-icon-fire"></i>
+                                            Popular
+                                        </a>
+                
+                                        <div class="slide__info">
+                                            <h3 class="features__subtitle">
+                                                Cosmo's house
+                                            </h3>
+                                            <p class="features__price">
+                                                $ 22.000.000
+                                            </p>
+                
+                                            <div class="slide__info_people">
+                                                <img src="img/people6.png" width="40" height="40" alt="Jenny Wilson">
+                                                <div class="slide__info_contacts">
+                                                    <p>
+                                                        Jenny Wilson
+                                                    </p>
+                                                    <span>
+                                                        Preston Rd. Inglewood, Maine 98380
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/featured-2.jpg" width="340" height="382" alt="house photo" class="swiper-img">
+                                        <a href="#!" class="img__button img__button_new radius">
+                                            <i class="icon-house-icon"></i>
+                                            New house
+                                        </a>
+                
+                                        <div class="slide__info">
+                                            <h3 class="features__subtitle">
+                                                Woodlandside
+                                            </h3>
+                                            <p class="features__price">
+                                                $ 20.000.000
+                                            </p>
+                
+                                            <div class="slide__info_people">
+                                                <img src="img/people4.png" width="40" height="40" alt="Robert Fox">
+                                                <div class="slide__info_contacts">
+                                                    <p>
+                                                        Robert Fox
+                                                    </p>
+                                                    <span>
+                                                        Dr. San Jose, South Dakota
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/featured-3.jpg" width="340" height="382" alt="house photo" class="swiper-img">
+                                        <a href="#!" class="img__button img__button_best radius">
+                                            <i class="icon-icon-wallet"></i>
+                                            Best deals
+                                        </a>
+                
+                                        <div class="slide__info">
+                                            <h3 class="features__subtitle">
+                                                The old lighthouse
+                                            </h3>
+                                            <p class="features__price">
+                                                $ 44.000.000
+                                            </p>
+                
+                                            <div class="slide__info_people">
+                                                <img src="img/people5.png" width="40" height="40" alt="Ronald Richards">
+                                                <div class="slide__info_contacts">
+                                                    <p>
+                                                        Ronald Richards
+                                                    </p>
+                                                    <span>
+                                                        Santa Ana, Illinois
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next radius">
+                                    <span class="visually-hidden">Далее</span>
+                                    <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.50778 17.1645C7.77808 17.165 8.04004 17.0703 8.24818 16.8967C8.36532 16.799 8.46215 16.679 8.53313 16.5436C8.60411 16.4081 8.64783 16.2599 8.6618 16.1075C8.67577 15.955 8.65971 15.8012 8.61454 15.655C8.56937 15.5088 8.49598 15.373 8.39857 15.2554L3.21577 9.01589L8.21347 2.76475C8.30957 2.64567 8.38133 2.50867 8.42463 2.3616C8.46794 2.21453 8.48193 2.0603 8.4658 1.90777C8.44968 1.75524 8.40375 1.60742 8.33067 1.47281C8.25758 1.3382 8.15878 1.21945 8.03994 1.12339C7.92024 1.01741 7.78007 0.937476 7.62821 0.888598C7.47636 0.839719 7.3161 0.822952 7.1575 0.839348C6.9989 0.855744 6.84538 0.904949 6.70658 0.983876C6.56778 1.0628 6.44668 1.16975 6.3509 1.298L0.763194 8.28251C0.593038 8.4908 0.500019 8.75207 0.500019 9.02171C0.500019 9.29134 0.593038 9.55261 0.763194 9.7609L6.54757 16.7454C6.66362 16.8863 6.81105 16.9976 6.97788 17.0705C7.14471 17.1433 7.32626 17.1755 7.50778 17.1645Z" fill-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-prev radius">
+                                    <span class="visually-hidden">Назад</span>
+                                    <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.50778 17.1645C7.77808 17.165 8.04004 17.0703 8.24818 16.8967C8.36532 16.799 8.46215 16.679 8.53313 16.5436C8.60411 16.4081 8.64783 16.2599 8.6618 16.1075C8.67577 15.955 8.65971 15.8012 8.61454 15.655C8.56937 15.5088 8.49598 15.373 8.39857 15.2554L3.21577 9.01589L8.21347 2.76475C8.30957 2.64567 8.38133 2.50867 8.42463 2.3616C8.46794 2.21453 8.48193 2.0603 8.4658 1.90777C8.44968 1.75524 8.40375 1.60742 8.33067 1.47281C8.25758 1.3382 8.15878 1.21945 8.03994 1.12339C7.92024 1.01741 7.78007 0.937476 7.62821 0.888598C7.47636 0.839719 7.3161 0.822952 7.1575 0.839348C6.9989 0.855744 6.84538 0.904949 6.70658 0.983876C6.56778 1.0628 6.44668 1.16975 6.3509 1.298L0.763194 8.28251C0.593038 8.4908 0.500019 8.75207 0.500019 9.02171C0.500019 9.29134 0.593038 9.55261 0.763194 9.7609L6.54757 16.7454C6.66362 16.8863 6.81105 16.9976 6.97788 17.0705C7.14471 17.1433 7.32626 17.1755 7.50778 17.1645Z" fill-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="tour">
+                    <div class="tour__left">
+                        <p class="section__pretitle">
+                            Ready to sell!
+                        </p>
+                        <div class="section__container">
+                            <h2 class="title tour__title">
+                                Let’s tour and see our house!
+                            </h2>
+                            <p class="tour__info">
+                                Houses recommended by our partners that have been curated to become the home of your dreams!
+                            </p>
+                            <p class="tour__house">
+                                House detail
+                            </p>
+                            <ul class="house__details">
+                                <li class="house__details_item">
+                                    <i class="icon-bed"></i>
+                                    <p>4 bedrooms</p>
+                                </li>
+                                <li class="house__details_item">
+                                    <i class="icon-car-garage"></i>
+                                    <p>1 carport</p>
+                                </li>
+                                <li class="house__details_item">
+                                    <i class="icon-bath"></i>
+                                    <p>2 bathrooms</p>
+                                </li>
+                                <li class="house__details_item">
+                                    <i class="icon-stairs-with-handrail"></i>
+                                    <p>2 floors</p>
+                                </li>
+                            </ul>
+                            <div class="house__contacts">
+                                <div class="slide__info_people">
+                                    <img src="img/people3.png" width="56" height="56" alt="Dianne Russell">
+                                    <div class="slide__info_contacts">
+                                        <p>
+                                            Dianne Russell
+                                        </p>
+                                        <span>
+                                            Manager director
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="radius btn-dark_green tour__button">
+                                    <i class="icon-call"></i>
+                                    Contact now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour__right">
+                        <img src="img/tour-house.png" alt="Tour house" class="tour__right_img" width="488" height="416">
+                        <ul class="tour__right-list">
+                            <li class="tour__right-item">
+                                <img src="img/sofa.jpg" alt="sofa" width="296" height="168">
+                            </li>
+                            <li class="tour__right-item">
+                                <img src="img/vase.jpg" alt="vase" width="96" height="80">
+                            </li>
+                            <li class="tour__right-item">
+                                <img src="img/chair.jpg" alt="chair" width="96" height="80">
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <section class="reviews">
+                <p class="section__pretitle pretitle-center">
+                    See our review
+                </p>
+                <h2 class="title reviews__title">
+                    What our user say about us
+                </h2>
+
+                <div class="swiper-container">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/reviews-1.jpg" width="740" height="400" alt="Hounter House">
+                                <div class="reviews__info">
+                                    <h3 class="reviews__subtitle">
+                                        My house sold out fast!
+                                    </h3>
+                                    <p class="reviews__text">
+                                        I was finally able to sell my house quickly through Hounter by immediately setting me up with people who wanted my house. I also do not get a discount from the sale of my house. Awesome!
+                                    </p>
+                                    <div class="slide__info_people">
+                                        <img src="img/people7.png" width="40" height="40" alt="Courtney Henry">
+                                        <div class="reviews__box">
+                                            <div class="slide__info_contacts">
+                                                <p>
+                                                    Courtney Henry
+                                                </p>
+                                                <span>
+                                                    CEO Andarafish
+                                                </span>
+                                            </div>
+                                            <div class="reviews__rate">
+                                                <i class="icon-star"></i>
+                                                <p>4.3</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/reviews-2.jpg" width="740" height="400" alt="Hounter House">
+                                <div class="reviews__info">
+                                    <h3 class="reviews__subtitle">
+                                        Best! I got the house I wanted through Hounter
+                                    </h3>
+                                    <p class="reviews__text">
+                                        Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.
+                                    </p>
+                                    <div class="slide__info_people">
+                                        <img src="img/people3.png" width="40" height="40" alt="Dianne Russell">
+                                        <div class="reviews__box">
+                                            <div class="slide__info_contacts">
+                                                <p>
+                                                    Dianne Russell
+                                                </p>
+                                                <span>
+                                                    Manager director
+                                                </span>
+                                            </div>
+                                            <div class="reviews__rate">
+                                                <i class="icon-star"></i>
+                                                <p>4.6</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/reviews-3.jpg" width="740" height="400" alt="Hounter House">
+                                <div class="reviews__info">
+                                    <h3 class="reviews__subtitle">
+                                        Through the Hounter, I can get a house for my self
+                                    </h3>
+                                    <p class="reviews__text">
+                                        By looking for information about what kind of house we want, we managed to get the house we wanted very quickly, and directly connected with the seller to be able to ask about the details, very helpful!
+                                    </p>
+                                    <div class="slide__info_people">
+                                        <img src="img/people1.png" width="40" height="40" alt="Esther Howard">
+                                        <div class="reviews__box">
+                                            <div class="slide__info_contacts">
+                                                <p>
+                                                    Esther Howard
+                                                </p>
+                                                <span>
+                                                    Head of Marketing
+                                                </span>
+                                            </div>
+                                            <div class="reviews__rate">
+                                                <i class="icon-star"></i>
+                                                <p>4.6</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+                <section class="find">
+                    <p class="section__pretitle pretitle-center">
+                        See tips and trick from our partnership
+                    </p>
+                    <h2 class="title find__title">
+                        Find out more about selling and buying homes
+                    </h2>
+                    <button class="radius btn-dark_green find__button">
+                        More artikel
+                    </button>
+                    
+                    <div class="find__subcontainer">
+                        <div class="find__left">
+                            <div class="find__subcontainer">
+                                <img src="img/room.jpg" alt="room" class="find__img" width="200" height="144">
+                                <div class="find__subcontainer_info">
+                                    <div class="slide__info_people">
+                                        <img src="img/people3.png" width="32" height="32" alt="Dianne Russell">
+                                        <p>
+                                            Dianne Russell
+                                        </p>
+                                    </div>
+                                    <h3 class="find__subcontainer_title">
+                                        The things we need to check when we want to buy a house
+                                    </h3>
+                                    <div class="find__subcontainer_time">
+                                        <i class="icon-clock"></i>
+                                        <p>4 min read | 25 Apr 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="find__subcontainer">
+                                <img src="img/house-1.jpg" alt="house-1" class="find__img" width="200" height="144">
+                                <div class="find__subcontainer_info">
+                                    <div class="slide__info_people">
+                                        <img src="img/people8.jpg" width="32" height="32" alt="Courtney Henry">
+                                        <p>
+                                            Courtney Henry
+                                        </p>
+                                    </div>
+                                    <h3 class="find__subcontainer_title">
+                                        7 Ways to distinguish the quality of the house we want to buy
+                                    </h3>
+                                    <div class="find__subcontainer_time">
+                                        <i class="icon-clock"></i>
+                                        <p>6 min read | 24 Apr 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="find__subcontainer">
+                                <img src="img/house-2.jpg" alt="house-2" class="find__img" width="200" height="144">
+                                <div class="find__subcontainer_info">
+                                    <div class="slide__info_people">
+                                        <img src="img/people9.jpg" width="32" height="32" alt="Darlene Robertson">
+                                        <p>
+                                            Darlene Robertson
+                                        </p>
+                                    </div>
+                                    <h3 class="find__subcontainer_title">
+                                        The best way to know the quality of the house we want to buy
+                                    </h3>
+                                    <div class="find__subcontainer_time">
+                                        <i class="icon-clock"></i>
+                                        <p>2 min read | 24 Apr 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="find__right">
+                            <img src="img/house-3.jpg" alt="house-3" class="find__img_right" width="560" height="280">
+                            <div class="find__subcontainer_info">
+                                <div class="slide__info_people">
+                                    <img src="img/people10.jpg" width="32" height="32" alt="Cameron Williamson">
+                                    <p>
+                                        Cameron Williamson
+                                    </p>
+                                </div>
+                                <h3 class="find__subcontainer_title">
+                                    12 Things to know before buying a house
+                                </h3>
+                                <p class="find__subcontainer_text">
+                                    Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house
+                                </p>
+                                <div class="find__subcontainer_time">
+                                    <i class="icon-clock"></i>
+                                    <p>8 min read | 25 Apr 2021</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="subscribe radius">
+                    <div class="subscribe__left">
+                        <div class="subscribe__imgages">
+                            <img src="img/chair-2.jpg" class="subscrbe__img" width="81" height="81" alt="chair">
+                            <img src="img/people3.png" class="subscrbe__img" width="36" height="36" alt="Dianne Russell">
+                        </div>
+                        <div class="subscribe__imgages">
+                            <img src="img/people5.png" class="subscrbe__img" width="36" height="36" alt="Ronald Richards">
+                            <img src="img/house-4.jpg" class="subscrbe__img" width="54" height="54" alt="house-4">
+                        </div>
+                    </div>
+
+                    <div class="subscribe__center">
+                        <h2 class="title subscribe__title">
+                            Subscribe for more info <br>and update from hounter
+                        </h2>
+                        <form class="search subscribe__search" action="#!" method="get">
+                            <i class="icon-email subscribe__icon"></i>
+                            <label for="email">Your email here</label>
+                            <input class="radius search" type="text" id="email" name="email" placeholder="Your email here">
+                            <button class="radius btn-dark_green subscribe__button" type="submit">Subsribe now</button>
+                        </form>
+                    </div>
+
+                    <div class="subscribe__right">
+                        <div class="subscribe__imgages">
+                            <img src="img/house-5.jpg" class="subscrbe__img" width="70" height="70" alt="house">
+                            <img src="img/people8.jpg" class="subscrbe__img" width="36" height="36" alt="Courtney Henry">
+                        </div>
+                        <div class="subscribe__imgages">
+                            <img src="img/people11.jpg" class="subscrbe__img" width="36" height="36" alt="people">
+                            <img src="img/chair-3.jpg" class="subscrbe__img" width="55" height="55" alt="chair">
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+
+        <div class="container">
+            <footer class="main-footer">
+                <div class="main-footer__left">
+                    <div class="logo main-footer__logo">
+                        <img src="img/Logo.svg" width="115" height="36" alt="Hounter logo">
+                    </div>
+                    <p class="main-footer__info">
+                        We provide information about properties such as houses, villas and apartments to help people find their dream home
+                    </p>
+
+                    <ul class="social main-footer__social">
+                        <li class="social__item">
+                            <a href="#!" class="social__link">
+                                <i class="social__icon icon-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#!" class="social__link">
+                                <i class="social__icon icon-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#!" class="social__link">
+                                <i class="social__icon icon-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-footer__right">
+                    <ul class="property">
+                        <li class="property__title main-footer__right_title">
+                            Property
+                        </li>
+                        <li class="property__item main-footer__right_link">
+                            <a href="#!" class="property__link">
+                                House
+                            </a>
+                        </li>
+                        <li class="property__item main-footer__right_link">
+                            <a href="#!" class="property__link">
+                                Apartment
+                            </a>
+                        </li>
+                        <li class="property__item main-footer__right_link">
+                            <a href="#!" class="property__link">
+                                Villa
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="article">
+                        <li class="article__title main-footer__right_title">
+                            Article
+                        </li>
+                        <li class="article__item main-footer__right_link">
+                            <a href="#!" class="article__link">
+                                New article
+                            </a>
+                        </li>
+                        <li class="article__item main-footer__right_link">
+                            <a href="#!" class="article__link">
+                                Popular article
+                            </a>
+                        </li>
+                        <li class="article__item main-footer__right_link">
+                            <a href="#!" class="article__link">
+                                Most read
+                            </a>
+                        </li>
+                        <li class="article__item main-footer__right_link">
+                            <a href="#!" class="article__link">
+                                Tips & Tricks
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="contact">
+                        <li class="contact__title main-footer__right_title">
+                            Сontact
+                        </li>
+                        <li class="contact__item main-footer__right_link">
+                            <a href="#!" class="contact__link">
+                                2464 Royal Ln. Mesa, New Jersey 45463
+                            </a>
+                        </li>
+                        <li class="contact__item main-footer__right_link">
+                            <a href="tel:6715550110" class="contact__link">
+                                (671) 555-0110
+                            </a>
+                        </li>
+                        <li class="contact__item main-footer__right_link">
+                            <a href="mailto:info@hounter.com" class="contact__link">
+                                info@hounter.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+    <script src="js/script.js"></script>
+
+</body>
+</html>

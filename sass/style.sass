@@ -1,0 +1,1660 @@
+// VARIABLES AND MIXINS
+
+$color-white: #ffffff
+$color-light-grey: #F0F3FD
+$color-light-grey-2: #E0E3EB
+$color-dark-grey: #888B97
+$color-black: #000000
+
+$main-color: #1B1C57
+$main-color-dark: #0E1735
+$added-color: #626687
+$added-color-dark: #3C4563
+$pretitle-color: #F59E0B
+
+$btn-color-light: #D1FAE5
+$btn-color-dark: #10B981
+$btn-font-green: #047857
+
+$btn-popular-font: #EF4444
+$btn-popular-color: #FEE2E2
+
+$icon-mail: #3B82F6
+$btn-new-font: #1D4ED8
+$btn-new-color: #DBEAFE
+
+$text-shadow: -1px 0 $main-color, 0 1px $main-color, 1px 0 $main-color, 0 -1px $main-color
+
+$mb-5: 5rem
+
+@mixin display-between
+    display: flex
+    justify-content: space-between
+
+@mixin display-align
+    display: flex
+    align-items: center
+
+@mixin display-between-center
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+@mixin font14-line18
+    font-size: 1.4rem
+    line-height: 1.8rem
+
+@mixin font14-line22
+    font-size: 1.4rem
+    line-height: 2.2rem
+
+@mixin font14-line24
+    font-size: 1.4rem
+    line-height: 2.4rem
+
+@mixin font16-line24
+    font-size: 1.6rem
+    line-height: 2.4rem
+
+@mixin font16-line28
+    font-size: 1.6rem
+    line-height: 2.8rem
+
+@mixin content-position
+    content: ""
+    position: absolute
+
+// COMMON STYLES 
+
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+::-webkit-scrollbar
+    width: 0
+
+html
+    font-size: 62.5%
+    scroll-behavior: smooth
+
+body
+    color: $main-color
+    font-size: 1.6rem
+    font-family: "Lexend", sans-serif
+    background-color: $color-white
+    overflow-x: hidden
+    padding-bottom: 12rem
+
+img
+    height: auto
+    display: block
+
+h1, h2, h3, h4
+    margin: 0
+
+a
+    @include font14-line18
+    color: $color-light-grey
+    font-weight: 600
+    text-decoration: none
+    transition: .3s
+
+a,
+button
+    cursor: pointer
+
+p
+    @include font16-line28
+    text-transform: none
+
+ul, ol
+    list-style: none
+
+.container
+    width: 1200px
+    margin: 0 auto
+
+.background-wrapper
+    position: relative
+    margin: 0 auto
+    max-width: 144rem
+
+    &::before
+        @include content-position
+        top: -230px
+        left: -140px
+        background-image: url(../img/background-1.png)
+        background-repeat: no-repeat
+        background-position: top left
+        background-size: 800px
+        width: 800px
+        height: 800px
+        z-index: -1
+
+.radius
+    border-radius: 32px
+
+.btn-transparent
+    display: inline-block
+    padding: 7.5px 16.5px
+    background-color: rgba($color-white, 0.1)
+    border: 1px solid rgba($color-white, 0.3)
+
+.btn-light_green
+    @include font14-line22
+    font-weight: 600
+    border: none
+    color: $btn-font-green
+    background-color: $btn-color-light
+    padding: 12px 24.5px
+
+.btn-dark_green
+    @include display-align
+    @include font14-line22
+    font-weight: 600
+    border: none
+    padding: 13px 21.5px
+    color: $color-white
+    background-color: $btn-color-dark
+    text-transform: capitalize
+
+.list
+    display: flex
+
+    &::after
+        content: ""
+        background: url(../icon/arrow.svg) center/cover no-repeat
+        width: 18px
+        height: 18px
+        margin-left: 1rem
+
+.visually-hidden
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    border: 0
+    padding: 0
+    white-space: nowrap
+    clip-path: inset(100%)
+    clip: rect(0 0 0 0)
+    overflow: hidden
+
+.title
+    font-weight: 600
+    font-size: 3.2rem
+    line-height: 4rem
+    text-transform: capitalize
+
+// HEADER
+
+.main-header
+    padding-top: 4rem
+
+.main-nav
+    @include display-between-center
+    background-color: transparent
+    width: 1200px
+    margin-bottom: 9.6rem
+
+    &__logo
+        margin-right: auto
+
+.navigation
+    @include display-between-center
+    width: 29%
+    margin-right: 4%
+
+// SECTION HERO
+
+.search
+    @include font14-line22
+    color: $color-dark-grey
+    font-weight: 500
+
+    input:focus
+        outline: none
+
+    label
+        position: absolute
+        clip: rect(0 0 0 0)
+
+.icon-location
+    color: $pretitle-color
+
+.hero
+    margin-bottom: 21rem
+
+    &__right
+        position: relative
+        border-radius: 0px 0px 0px 80px
+
+        &_img
+            position: absolute
+            bottom: -91px
+            right: -117px
+            z-index: -1
+
+    &__title
+        width: 30%
+        font-size: 4rem
+        font-weight: 600
+        line-height: 5rem
+        text-transform: capitalize
+        text-shadow: $text-shadow
+        margin-bottom: 2.4rem
+
+        span
+            color: $color-white
+
+    &__info
+        width: 39%
+        color: $added-color
+        opacity: 0.75
+        margin-bottom: 3.2rem
+
+    &__search
+        position: relative
+        margin-bottom: 3.2rem
+
+        i
+            display: block
+            position: absolute
+            top: 16px
+            left: 25px
+            font-size: 2.2rem
+
+        input
+            width: 41.35%
+            padding: 16.2px 65px
+            border: 1px solid $color-light-grey-2
+
+    &__button
+        position: absolute
+        top: 4px
+        left: 382px
+
+        &::after
+            content: ""
+            background: url(../icon/arrow_slider.svg) center/cover no-repeat
+            width: 7px
+            height: 14px
+            transform: rotate(180deg)
+            margin-left: 1.1rem
+
+    &__partnership
+        @include display-between
+        width: 36%
+
+    &__partnership-info
+        color: $color-dark-grey
+        font-size: 1.6rem
+        line-height: 3.2rem
+        text-transform: capitalize
+
+    &__boxes
+        @include display-between
+        position: absolute
+        width: 54rem
+        height: 11.4rem
+        right: 3px
+        top: -60px
+
+        &_big
+            @include display-align
+            padding: 2.9rem 2.6rem
+            background-color: $color-white
+
+        &_small
+            @include display-align
+            padding: 2.9rem 2.4rem
+            background-color: $color-white
+
+            img
+                margin-right: 1.6rem
+
+        p
+            @include font16-line24
+            color: $main-color
+            font-weight: 600
+            text-transform: capitalize
+            margin-bottom: 2px
+
+        span
+            color: $added-color
+            font-size: 12px
+            line-height: 2rem
+            text-transform: capitalize
+
+.people
+    display: flex
+    width: 11.2rem
+    margin-right: 1.6rem
+
+.people li img
+    border-radius: 50%
+    outline: 3px solid $color-white
+    outline-offset: -3px
+
+.people li:nth-child(2)
+    transform: translateX(-27px)
+
+.people li:nth-child(3)
+    transform: translateX(-53px)
+
+// SECTION FEATURES
+
+.section
+
+    &__container
+        margin-left: 4rem
+        position: relative
+
+    &__pretitle
+        @include font14-line18
+        color: $pretitle-color
+        font-weight: 500
+        text-transform: capitalize
+        position: relative
+        margin: 0 0 1.2rem 4rem
+
+        &::before
+            @include content-position
+            width: 32px
+            height: 1px
+            top: 8px
+            left: -40px
+            background-color: $pretitle-color
+
+.features
+    margin-bottom: 12rem
+
+    &__subtitle,
+    &__info
+        font-weight: 500
+        line-height: 3.2rem
+
+    &__subtitle
+        font-size: 2.4rem
+        margin-bottom: .8rem
+
+    &__price
+        font-size: 2rem
+        color: $added-color-dark
+        margin-bottom: 2.4rem
+
+    &__block
+        @include display-between-center
+        width: 80%
+        margin-bottom: 4rem
+
+    &__navigation
+        @include display-between
+        width: 55%
+
+    &__item
+        user-select: none
+
+    .swiper-container
+        position: relative
+        width: 100%
+        height: 555px
+        margin: 0 auto
+
+    .swiper
+        width: 100%
+        height: 100%
+        overflow: visible !important
+
+        &-slide
+            width: 350px
+            min-width: 350px
+            height: 552px
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            background: transparent
+            user-select: none
+
+        &-slide .swiper-img
+            border-radius: 24px
+            margin-bottom: 2.4rem
+
+    .swiper-button-prev,
+    .swiper-button-next
+        @include display-align
+        justify-content: center
+        position: absolute
+        top: -70px
+        left: auto
+        width: 6rem
+        height: 5.2rem
+        border: none
+        box-sizing: border-box
+        background-color: $btn-color-dark
+        cursor: pointer
+        z-index: 1
+
+        svg
+            fill: $color-white
+
+        &:hover
+            opacity: 0.7
+        &:active
+            opacity: 0.5
+
+    .swiper-button-next
+        right: 2px
+        transform: rotate(180deg)
+
+    .swiper-button-prev
+        right: 85px
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after
+        display: none !important
+
+    .swiper-button-disabled
+        opacity: 1 !important
+        background-color: $color-light-grey-2 !important
+
+        svg
+            fill: $added-color-dark
+
+.block-button
+    @include display-between-center
+    color: $color-dark-grey
+    font-weight: 500
+    font-size: 1.8rem
+    line-height: 2.8rem
+    border: 1px solid $color-light-grey-2
+    padding: 11px 25px
+    transition: all .3s
+
+    i
+        margin-right: 11px
+        color: $color-dark-grey
+
+    &:hover
+        border: 1px solid transparent
+        background-color: $btn-color-light
+        color: $btn-color-dark
+
+    &:hover i
+        color: $btn-color-dark
+
+.img__button
+    @include display-align
+    @include font14-line18
+    font-weight: 500
+    text-transform: capitalize
+    position: absolute
+    top: 335px
+    margin-left: 16px
+    padding: 8px 15px
+
+    i
+        margin-right: 12px
+
+    &_popular
+        width: 11.2rem
+        color: $btn-popular-font
+        background-color: $btn-popular-color
+
+    &_new
+        width: 13.5rem
+        color: $btn-new-font
+        background-color: $btn-new-color
+
+    &_best
+        width: 13rem
+        color: $btn-font-green
+        background-color: $btn-color-light
+
+.slide__info
+    color: $main-color-dark
+    text-transform: capitalize
+    text-align: left
+
+    &_people
+        @include display-align
+
+    &_people img
+        margin: 0 1.6rem 0 0
+
+    &_contacts
+        @include display-between
+        align-items: flex-start
+        flex-direction: column
+        font-weight: 500
+
+    &_contacts p
+        font-size: 1.8rem
+        line-height: 2.4rem
+        margin-bottom: .4rem
+
+    &_contacts span
+        @include font14-line22
+        color: $color-dark-grey
+        text-transform: capitalize
+
+// SECTION TOUR
+
+.tour .section__container
+    max-width: 600px
+
+.tour
+    position: relative
+    margin-bottom: 15.3rem
+
+    &::before
+        @include content-position
+        top: -300px
+        right: -330px
+        background-image: url(../img/background-2.png)
+        background-repeat: no-repeat
+        background-size: 700px
+        width: 700px
+        height: 700px
+        z-index: -1
+
+    &__title
+        margin-bottom: 1.6rem
+
+    &__info,
+    &__house
+        @include font16-line28
+        margin-bottom: 1.6rem
+
+    &__info
+        width: 69%
+        opacity: 0.75
+        color: $added-color
+
+    &__house
+        color: $main-color
+        font-weight: 600
+        text-transform: capitalize
+
+    &__button
+        padding: 12px 16.5px
+
+        i
+            font-size: 2.4rem
+            margin-right: 1.6rem
+
+.house__details
+    @include display-between
+    width: 85%
+    height: 7.7rem
+    flex-wrap: wrap
+    flex-direction: column
+    position: relative
+    margin-bottom: 6.5rem
+
+    &_item
+        @include display-align
+
+    i
+        font-size: 3.2rem
+        color: $color-dark-grey
+        margin-right: 1.8rem
+
+    p
+        color: $added-color-dark
+        font-weight: 500
+        font-size: 1.6rem
+        line-height: 2rem
+        text-transform: capitalize
+
+    &::before
+        @include content-position
+        bottom: -35px
+        width: 440px
+        height: 2px
+        background-color: $color-light-grey
+
+.tour__left .slide__info_people img
+    margin-right: 2.4rem
+
+.tour__left .slide__info_people span
+    @include font16-line24
+    font-weight: 500
+
+.house__contacts
+    display: flex
+    align-items: center
+
+    .slide__info_people
+        margin-right: 5.7rem
+
+.tour__right
+    position: absolute
+    top: -35px
+    right: 0
+
+    &-list
+        display: flex
+        align-items: flex-end
+        z-index: 1
+        position: absolute
+        bottom: -43px
+        left: -40px
+
+    &-item img
+        border-radius: 4px
+
+.tour__right-item:nth-child(1)
+    margin-right: 1.2rem
+
+.tour__right-item:nth-child(2)
+    margin-right: .8rem
+
+// SECTION REVIEWS
+
+.pretitle-center
+    text-align: center
+    margin: 0 auto 1.2rem
+
+    &::before
+        top: -50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+.reviews
+    margin-bottom: 27.3rem
+
+    &__title
+        text-align: center
+        margin-bottom: 4rem
+
+    &__info
+        width: 82.75%
+        height: 62.3%
+        background-color: $color-white
+        box-shadow: 0px 9px 32px rgba(89, 92, 219, 0.05)
+        border-radius: 16px
+        position: absolute
+        z-index: 1
+        top: 255px
+        padding: 3.3rem
+        text-align: left
+
+        .slide__info_people img
+            width: 40px !important
+            height: 40px !important
+            margin-right: 2.4rem
+
+        .slide__info_contacts p
+            @include font14-line22
+            color: $main-color-dark
+
+    &__subtitle
+        font-weight: 600
+        font-size: 2rem
+        line-height: 2.5rem
+        text-transform: capitalize
+        margin-bottom: 1.6rem
+
+    &__text
+        @include font14-line24
+        opacity: 0.75
+        color: $added-color
+        margin-bottom: 2.4rem
+
+    &__box
+        @include display-between
+        align-items: flex-end
+        width: 85%
+
+    &__rate
+        @include display-between-center
+
+        i
+            color: $pretitle-color
+            margin-right: 1.6rem
+
+        p
+            color: $added-color-dark
+            font-weight: 600
+            font-size: 2rem
+            line-height: 2.8rem
+
+    .swiper-container
+        position: relative
+        width: 100%
+        margin: 0 auto
+
+    .swiper
+        width: 100%
+        height: 100%
+        overflow: visible !important
+
+        &-slide
+            @include display-align
+            justify-content: center
+            width: 74rem
+            min-width: 74rem
+            height: 40rem
+            text-align: center
+            font-size: 1.8rem
+            background: $color-white
+            user-select: none
+            position: relative
+
+            img
+                display: block
+                width: auto !important
+                height: auto !important
+                object-fit: cover
+                border-radius: 8px
+
+        &-pagination
+            bottom: -150px !important
+
+        &-pagination-bullet
+            background: $color-light-grey-2 !important
+            opacity: 1 !important
+            margin: 0 8px !important
+
+        &-pagination-bullet-active
+            background: $added-color-dark !important
+
+// SECTION FIND
+
+.find
+    margin-bottom: 12rem
+    position: relative
+
+    &__subcontainer
+        @include display-between
+        align-items: flex-start
+
+    &::before
+        @include content-position
+        top: -120px
+        left: -360px
+        background-image: url(../img/background-3.png)
+        background-repeat: no-repeat
+        background-size: 700px
+        width: 700px
+        height: 850px
+        z-index: -1
+
+    &__title
+        text-align: center
+        margin: 0 auto 2.4rem
+        width: 36%
+
+    &__button
+        padding: 12px 16.5px
+        margin: 0 auto 4rem
+
+    &__left,
+    &__right
+        width: 50%
+
+    &__left
+        @include display-between
+        flex-direction: column
+        margin-right: 6.8rem
+
+    &__img
+        border-radius: 16px
+
+        &:not(:last-child)
+            margin-right: 3.2rem
+
+        &_right
+            margin-bottom: 2.4rem
+
+    &__subcontainer
+        @include display-between-center
+
+        &:not(:last-child)
+            margin-bottom: 4rem
+
+        &_title
+            font-weight: 500
+            font-size: 1.8rem
+            line-height: 3.3rem
+            text-transform: capitalize
+            margin-bottom: 1.6rem
+
+        &_text
+            @include font14-line24
+            color: $added-color
+            opacity: 0.75
+            margin-bottom: 1.6rem
+
+        &_time
+            @include display-align
+
+            p
+                @include font14-line24
+                color: $color-dark-grey
+
+.find__subcontainer_info .slide__info_people
+    margin-bottom: 1.2rem
+
+.find__subcontainer_info .slide__info_people p
+    @include font14-line22
+    color: $added-color-dark
+    font-weight: 400
+
+.find__right .find__subcontainer_title
+    font-size: 2.4rem
+    margin-bottom: 1.2rem
+
+.icon-clock
+    color: $color-dark-grey
+    margin-right: 1.4rem
+
+// SECTION SUBSCRIBE
+
+.icon-email
+    color: $icon-mail
+
+.subscribe__imgages .subscrbe__img:nth-child(1)
+    margin-bottom: 5.4rem
+
+.subscribe__imgages:nth-child(2) .subscrbe__img:nth-child(1)
+    margin-bottom: 7.1rem
+
+.subscribe__right .subscribe__imgages:nth-child(1) .subscrbe__img:nth-child(1)
+    margin-bottom: 6.1rem
+
+.subscribe__right .subscribe__imgages:nth-child(2)
+    margin-top: 6rem
+
+.subscribe__right .subscribe__imgages:nth-child(2) .subscrbe__img:nth-child(1)
+    margin-bottom: 5.6rem
+
+.subscribe__imgages:nth-child(1)
+    margin-right: 7.9rem
+
+.subscribe__imgages:nth-child(2)
+    margin-top: 3rem
+
+.subscribe
+    @include display-between
+    align-items: flex-start
+    height: 31.2rem
+    padding: 3.8rem 7rem 6.5rem 4.4rem
+    background: url(../img/subscribe.jpg) center/cover no-repeat
+    margin-bottom: 120px
+
+    &__left,
+    &__right
+        display: flex
+
+    &__left
+        margin-right: 10.3rem
+
+    &__center
+        margin-top: auto
+        margin-right: 8.2rem
+
+    &__imgages
+        @include display-align
+        flex-direction: column
+
+        img
+            border-radius: 24px
+            outline: 2px solid $color-white
+            outline-offset: 0px
+
+    &__title
+        line-height: 4.8rem
+        text-align: center
+        margin-bottom: 3.2rem
+
+    &__search
+        position: relative
+
+        i
+            display: block
+            position: absolute
+            top: 16px
+            left: 25px
+            width: 18px
+            font-size: 2.2rem
+            z-index: 1
+
+        input
+            position: relative
+            width: 49.6rem
+            padding: 1.6rem 6.5rem
+            border: none
+
+    &__button
+        position: absolute
+        top: 4px
+        left: 363px
+        padding: 12px 16.1px
+
+// FOOTER
+
+.social
+    @include display-between-center
+    width: 47%
+
+    &__icon
+        font-size: 2rem
+        color: $added-color-dark
+
+    &__link
+        padding: 1rem
+
+.property,
+.article,
+.contact
+    text-transform: capitalize
+
+    &__title
+        color: $main-color-dark
+        font-weight: 600
+        font-size: 1.8rem
+        line-height: 2.2rem
+
+    &__link
+        @include font14-line18
+        color: $color-dark-grey
+        font-weight: 400
+
+.contact .contact__item:nth-child(4) .contact__link
+    text-transform: none
+
+.main-footer
+    display: flex
+    position: relative
+
+    &::before
+        @include content-position
+        right: -290px
+        bottom: -140px
+        background-image: url(../img/background-4.png)
+        background-repeat: no-repeat
+        background-size: 950px
+        width: 950px
+        height: 503px
+        z-index: -1
+
+    &__left,
+    &__right
+        display: flex
+
+    &__left
+        width: 26.5%
+        flex-direction: column
+        margin-right: auto
+
+    &__right
+        width: 51%
+        justify-content: space-between
+
+        &_title
+            margin-bottom: 2.4rem
+
+        &_link
+            margin-bottom: 1.8rem
+
+    &__logo
+        margin-bottom: 1.6rem
+
+    &__info
+        @include font14-line24
+        color: $added-color
+        opacity: 0.75
+        margin-bottom: 2.4rem
+
+.hamburger,
+.mobile-menu
+    display: none
+
+// MEDIA QUERIES
+
+@media (max-width: 1400px)
+
+    .background-wrapper
+        width: 90vw
+
+    .container
+        width: 1170px
+
+    .hero
+        &__right_img
+            bottom: -91px
+            right: -145px
+
+        &__title
+            width: 40%
+
+        &__button
+            left: 370px
+
+        &__boxes
+            right: -25px
+
+    .find__title
+        width: 37%
+
+@media (max-width: 1199px)
+
+    .container
+        width: 960px
+
+    html
+        font-size: 62%
+
+    .hero__right_img
+        display: none
+
+    .main-nav
+        width: 100%
+
+    .navigation
+        width: 55%
+        margin-right: 6%
+
+    a
+        color: $color-white
+
+    .btn-transparent
+        background-color: $btn-color-dark
+        border: 1px solid $btn-color-dark
+
+    .hero
+        &__left,
+        &__title,
+        &__info,
+        &__partnership
+            width: 100%
+
+        &__partnership
+            justify-content: space-around
+
+        &__title
+            text-align: center
+
+        &__button
+            left: 848px
+
+        &__search input
+            width: 100%
+
+        &__boxes_big,
+        &__boxes_small
+            border: 1px solid $btn-color-dark
+
+        &__boxes
+            left: 222px
+            top: 30px
+
+    .hero__info,
+    .hero__partnership-info,
+    .tour__info,
+    .reviews__text,
+    .find__subcontainer_text,
+        opacity: 1
+
+    .section__container
+        margin-left: unset
+
+    .features
+        margin-bottom: 7rem
+
+        &__title
+            margin-bottom: 2rem
+
+        &__block
+            flex-wrap: wrap
+            align-items: flex-start
+            flex-direction: column
+
+        &__navigation
+            width: 90%
+            justify-content: space-between
+            margin-bottom: 2rem
+
+        .swiper-button-prev,
+        .swiper-button-next
+            right: 60px
+
+        .swiper-button-prev
+            top: -180px
+
+        .swiper-button-next
+            top: -90px
+
+        .swiper-wrapper
+            margin-left: 200px
+
+    .tour
+        margin-bottom: 7rem
+
+        &::before
+            right: -440px
+            top: -50px
+
+        &__right
+            top: 22px
+            right: 64px
+
+            &_img
+                width: 300px
+
+            &-list
+                bottom: -120px
+                left: -120px
+
+    .reviews
+        margin-bottom: 23.3rem
+
+    .find,
+    .main-footer
+        width: 90%
+        margin: 0 auto
+
+    .find
+        margin-bottom: 7rem
+
+        &__title
+            width: 100%
+
+        &__left
+            flex-direction: row
+            margin-bottom: 5rem
+
+        &__right
+            @include display-between-center
+            width: 100%
+
+        &__subcontainer
+            flex-wrap: wrap
+
+            &_title
+                width: 90%
+
+        &__img
+            margin-bottom: 3rem
+
+            &_right
+                width: 26rem
+                height: 14rem
+                margin-bottom: unset
+                margin-right: 3rem
+
+    .find__img:not(:last-child)
+        margin-right: 12rem
+
+    .find__subcontainer:not(:last-child)
+        margin-bottom: unset
+
+    .subscribe
+        width: 90%
+        margin: 0 auto 30px
+
+        &__left,
+        &__right
+            display: none
+
+        &__center
+            width: 100%
+            margin-right: unset
+
+        &__search input
+            width: 100%
+
+        &__button
+            left: 618px
+
+    .main-footer__right
+        width: 71%
+
+@media (max-width: 991px)
+
+    .container
+        width: 720px
+
+    html
+        font-size: 61%
+
+    .hero
+        &__button
+            left: 607px
+
+        &__boxes
+            left: 100px
+
+    .features
+        &__navigation
+            width: 100%
+
+        .swiper-button-prev,
+        .swiper-button-next
+            right: 20px
+
+    .tour__right
+        display: none
+
+    .find__img
+        margin-right: unset
+
+    .find__img:not(:last-child)
+        margin-right: 6rem
+
+    .subscribe__button
+        left: 405px
+
+    .main-footer
+
+        &__left
+            margin-right: 30px
+
+        &__right ul:not(:last-child)
+            margin-right: 30px
+
+@media (max-width: 767px)
+
+    body
+        padding-bottom: 0
+
+    .background-wrapper
+        width: 100%
+        overflow: hidden
+        padding: 0 10px
+
+    .container
+        width: 540px
+
+    html
+        font-size: 60%
+
+    .btn-light_green
+        border: 1px solid $btn-font-green
+
+    .navigation
+        display: none
+
+    .mobile-menu
+        display: flex
+        position: fixed
+        top: 0
+        left: -100%
+        height: 100vh
+        background: rgba($btn-font-green, 0.9)
+        z-index: 10
+        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)
+
+        &__list
+            @include display-align
+            flex-wrap: wrap
+            flex-direction: column
+            justify-content: space-evenly
+            width: 100%
+            height: 100%
+
+        a
+            color: $color-white
+            font-size: 25px
+            font-weight: 500
+
+    .mobile-menu_active
+        left: 0px
+        width: 50%
+
+    .hamburger
+        @include display-between
+        flex-direction: column
+        position: fixed
+        top: 55px
+        right: 44px
+        width: 30px
+        height: 15px
+        z-index: 20
+
+        span
+            height: 2px
+            width: 100%
+            background: black
+            transition: 1s all
+            display: block
+
+    .hamburger_active
+        height: 4px
+
+        span
+            &:nth-child(1)
+                transform: translateY(5px) rotate(-45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                transform: translateY(3px) rotate(45deg)
+
+    .hero
+        &__button
+            left: 429px
+
+        &__boxes
+            left: 5px
+
+        &__info,
+        &__partnership-info
+            text-align: center
+
+        &__search
+            margin: 0 auto 4rem
+
+    .features .swiper-wrapper
+        margin-left: 290px
+
+    .reviews
+        margin-bottom: 42rem
+
+        .swiper-slide
+            height: 16rem
+
+            img
+                width: 300px !important
+
+        .slide__info_people img
+            width: 40px !important
+
+        .swiper-pagination
+            bottom: -355px !important
+
+        &__info
+            width: 50%
+            height: 300px
+            top: 150px
+
+    .find
+        text-align: center
+        margin-bottom: 7rem
+
+        &__left
+            width: 60%
+            flex-wrap: wrap
+            margin-right: unset
+            margin-bottom: 7rem
+
+        &__subcontainer
+            justify-content: center
+
+        &__subcontainer:not(:last-child)
+            margin-bottom: 7rem
+
+        &__subcontainer_title
+            width: 100%
+
+        &__img
+            width: 300px
+
+        &__img:not(:last-child)
+            margin-right: unset
+
+        &__right
+            flex-direction: column
+
+        &__img_right
+            width: 300px
+            margin-right: unset
+            margin-bottom: 3rem
+
+        &__right &__subcontainer_info
+            width: 60%
+
+    .subscribe
+        margin-bottom: 5rem
+
+        &__button
+            left: 247px
+
+    .main-footer
+        flex-direction: column
+        flex-wrap: wrap
+
+        &__left,
+        &__right
+            width: 90%
+            margin: 0 auto
+
+        &__left
+            margin-bottom: 3rem
+
+        &__info
+            text-align: center
+
+    .main-footer__right ul:not(:last-child)
+        margin-right: unset
+
+    .social
+        width: 77%
+        margin: 0 auto
+
+    .property,
+    .article,
+    .contact
+        width: 30%
+        margin: 0 auto
+        text-align: center
+
+@media (max-width: 575px)
+
+    .container
+        width: 100%
+
+    html
+        font-size: 59%
+
+    .title
+        width: 90%
+        font-size: 3rem
+        text-align: center
+        margin: 0 auto 3rem
+
+    .main-header
+        padding-top: 4rem
+
+    .main-nav
+        width: 78%
+        justify-content: space-around
+        margin: 0 auto 5rem
+
+        &__logo
+            margin-right: unset
+
+        &__button
+            padding: 6px 12.5px
+
+    .hamburger
+        top: 50px
+        right: 11px
+
+    .hero
+        width: 90%
+        margin: 0 auto 28rem
+
+        &__info,
+        &__partnership,
+            width: 90%
+            margin: 0 auto 3rem
+
+        &__partnership-info
+            width: 90%
+
+        &__search
+            width: 280px
+
+        &__button
+            left: 169px
+
+        &__partnership
+            height: 180px
+            flex-wrap: wrap
+            align-items: center
+            flex-direction: column
+
+        &__boxes
+            width: 290px
+            align-items: center
+            flex-direction: column
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -10%)
+
+            &_big,
+            &_small
+                width: 300px
+                border: none
+                padding: unset
+
+            &_big
+                justify-content: space-between
+                margin-bottom: 3rem
+
+            &_small
+                justify-content: space-around
+
+    form input::placeholder
+        color: transparent
+
+    .features
+        margin-bottom: $mb-5
+
+        &__navigation,
+            width: 90%
+            flex-direction: column
+            margin: 0 auto 3rem
+
+        &__item
+            width: 200px
+
+        &__item:not(:last-child)
+            margin-bottom: 3rem
+
+        .swiper-img
+            width: 200px
+
+        .swiper-slide
+            margin-right: -120px !important
+
+        .swiper-wrapper
+            margin-left: -20px
+
+        .swiper-button-prev,
+        .swiper-button-next
+            right: 0
+            left: 240px
+
+        .swiper-button-next
+            top: -94px
+
+        .swiper-button-prev
+            top: -171px
+
+        .swiper-container
+            height: 400px
+
+        .img__button
+            top: 165px
+
+    .house__details
+        width: 80%
+        align-items: flex-start
+        margin: 0 auto 6rem
+
+        p
+            font-size: 1.2rem
+
+    .house__contacts
+        align-items: center
+        flex-direction: column
+
+        .slide__info_people
+            margin: 0 0 2rem 0
+
+    .pretitle-center
+        margin: 0 auto 2rem
+
+    .tour
+        margin-bottom: 10rem
+
+        &__house,
+        &__info
+            text-align: center
+
+        &__left,
+        &__info
+            width: 90%
+            margin: 0 auto 3rem
+
+        &__button
+            padding: 5px
+
+            i
+                margin-right: 0px
+
+    .reviews
+        margin-bottom: 55rem
+
+        &__info
+            width: 300px
+            height: 360px
+
+        .swiper-pagination
+            bottom: -425px !important
+
+            &-bullet
+                width: 15px !important
+                height: 15px !important
+                margin: 0 30px !important
+
+    .find
+
+        &__left
+            width: 90%
+            margin-right: 0px
+
+        &__img
+            width: 180px
+
+        &__subcontainer
+            flex-direction: column
+
+        &__right .find__subcontainer_info
+            width: 90%
+
+    .subscribe
+        height: 20.2rem
+
+        &__title
+            display: none
+
+        &__button
+            display: inline-block
+            left: 50%
+            top: 200%
+            transform: translate(-50%, -50%)
+            width: 140px
+            height: 50px
+            padding: unset
+
+        &__center
+            position: relative
+            margin-top: unset
+
+        form
+            top: 0px
+            width: 105%
+
+    .property__link,
+    .article__link,
+    .contact__link,
+    .property__title,
+    .article__title,
+    .contact__title
+        font-size: 1rem
+        line-height: 1rem
